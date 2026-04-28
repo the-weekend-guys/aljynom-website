@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AL JYNOM Technical Services EST.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Favicon is set automatically from --img-favicon in styles.css via script.js -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- ═══ HEADER ═══ -->
     <header class="site-header">
-      <div class="container header-inner">
-        <a href="#home" class="logo">
-          <img src="logo-aljynom.png" alt="AL JYNOM Technical Services EST. logo" />
-        </a>
+      <div class="header-inner">
+        <a href="#home" class="logo" aria-label="AL JYNOM Technical Services EST."></a>
         <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
         <nav class="main-nav">
           <ul>
@@ -31,141 +33,210 @@
     </header>
 
     <main>
-      <!-- Hero / Home Section -->
+
+      <!-- ═══ HERO ═══ -->
       <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <h1>Trusted Technical &amp; Maintenance Services in Dubai</h1>
-          <p class="hero-subtitle">
-            Painting &bull; Electrical &bull; Plumbing &bull; AC &bull; Carpentry &bull; Fit-Out Solutions
-          </p>
-          <div class="hero-badges">
-            <div class="badge">✅ Licensed by Dubai Economy &amp; Tourism</div>
-            <div class="badge">✅ Professional &amp; Skilled Team</div>
-            <div class="badge">✅ Quality Work | On-Time Delivery</div>
+
+        <!-- OLD room — always visible full-width background -->
+        <div class="hero-parallax-bg" aria-hidden="true">
+          <img src="./hero-before.jpg" alt="" />
+        </div>
+
+        <!-- Vignette — darkens edges of before image so center stays focal -->
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <!-- Wireframe — uncomment to re-enable
+        <div class="hero-wireframe" aria-hidden="true"></div>
+        -->
+
+        <!-- NEW room — revealed only where the cursor moves -->
+        <!-- Wrapper has inset:0 so mask coords match hero coords exactly -->
+        <div class="hero-reveal-wrap" aria-hidden="true">
+          <div class="hero-reveal-img">
+            <img src="./hero-after.jpg" alt="" />
           </div>
-          <div class="hero-ctas">
-            <a href="tel:+971555162668" class="btn btn-secondary">Call Now +971555162668</a>
+        </div>
+
+        <!-- Custom cursor ring -->
+        <div class="hero-cursor-ring" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <p class="hero-eyebrow">Dubai, UAE &mdash; Licensed &amp; Certified</p>
+            <h1 class="hero-title">
+              Trusted Technical &amp;<br>Maintenance Services
+            </h1>
+            <p class="hero-desc">
+              High-quality maintenance, installation, and contracting services
+              for residential, commercial &amp; industrial projects across Dubai.
+            </p>
+            <div class="hero-ctas">
+              <a href="tel:+971555162668" class="btn btn-primary">Call Us Now &rarr;</a>
+              <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+            </div>
+            <p class="hero-services-line">
+              Painting &bull; Electrical &bull; Plumbing &bull; AC &bull; Carpentry &bull; Tiling &bull; Fit-Out
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- About Us Section -->
+      <!-- ═══ MARQUEE ═══ -->
+      <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track" style="font-family: 'Space Grotesk', sans-serif;">
+          <span>Painting</span><span class="mx">&#10022;</span>
+          <span>Electrical</span><span class="mx">&#10022;</span>
+          <span>Plumbing</span><span class="mx">&#10022;</span>
+          <span>AC &amp; Ventilation</span><span class="mx">&#10022;</span>
+          <span>Carpentry</span><span class="mx">&#10022;</span>
+          <span>Tiling Works</span><span class="mx">&#10022;</span>
+          <span>False Ceiling</span><span class="mx">&#10022;</span>
+          <span>Renovation</span><span class="mx">&#10022;</span>
+          <span>Fit-Out Solutions</span><span class="mx">&#10022;</span>
+          <span>Painting</span><span class="mx">&#10022;</span>
+          <span>Electrical</span><span class="mx">&#10022;</span>
+          <span>Plumbing</span><span class="mx">&#10022;</span>
+          <span>AC &amp; Ventilation</span><span class="mx">&#10022;</span>
+          <span>Carpentry</span><span class="mx">&#10022;</span>
+          <span>Tiling Works</span><span class="mx">&#10022;</span>
+          <span>False Ceiling</span><span class="mx">&#10022;</span>
+          <span>Renovation</span><span class="mx">&#10022;</span>
+          <span>Fit-Out Solutions</span><span class="mx">&#10022;</span>
+        </div>
+      </div>
+
+      <!-- ═══ ABOUT ═══ -->
       <section id="about" class="section about">
+        <span class="section-bg-word" aria-hidden="true">ABOUT</span>
         <div class="container">
-          <h2>About AL JYNOM TECHNICAL SERVICES EST.</h2>
-          <p>
-            AL JYNOM TECHNICAL SERVICES EST. is a Dubai-based licensed professional technical services company,
-            providing high-quality maintenance, installation, and contracting services for residential, commercial,
-            and industrial projects. With experienced technicians and a commitment to excellence, we ensure safe,
-            reliable, and cost-effective solutions for all types of technical works.
-          </p>
-          <div class="about-grid">
-            <div class="about-item">
-              <h3>License Type</h3>
-              <p>Professional License</p>
+          <div class="about-inner">
+            <div class="about-text reveal">
+              <p class="section-label">About Us</p>
+              <h2 class="section-title">AL JYNOM<br><span class="accent">Technical Services</span></h2>
+              <p class="about-body">
+                AL JYNOM TECHNICAL SERVICES EST. is a Dubai-based licensed professional technical services company,
+                providing high-quality maintenance, installation, and contracting services for residential, commercial,
+                and industrial projects. With experienced technicians and a commitment to excellence, we ensure safe,
+                reliable, and cost-effective solutions for all types of technical works.
+              </p>
             </div>
-            <div class="about-item">
-              <h3>Legal Status</h3>
-              <p>Sole Establishment</p>
-            </div>
-            <div class="about-item">
-              <h3>Operating Area</h3>
-              <p>Dubai, UAE</p>
+            <div class="about-stats reveal">
+              <div class="about-stat">
+                <h3>License Type</h3>
+                <p>Professional License</p>
+              </div>
+              <div class="about-stat">
+                <h3>Legal Status</h3>
+                <p>Sole Establishment</p>
+              </div>
+              <div class="about-stat">
+                <h3>Operating Area</h3>
+                <p>Dubai, UAE</p>
+              </div>
+              <div class="about-stat">
+                <h3>Regulation</h3>
+                <p>Dubai Economy &amp; Tourism</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Our Services Section -->
+      <!-- ═══ SERVICES ═══ -->
       <section id="services" class="section services">
         <div class="container">
-          <h2>Our Professional Services</h2>
-          <p class="section-intro">
-            We provide a complete range of licensed technical and maintenance services for villas, apartments, offices,
-            shops, and industrial facilities across Dubai.
-          </p>
+          <div class="services-header reveal">
+            <div>
+              <p class="section-label">What We Do</p>
+              <h2 class="section-title">Our Professional<br><span class="accent">Services</span></h2>
+            </div>
+            <p class="services-intro">
+              A complete range of licensed technical and maintenance services for villas, apartments,
+              offices, shops, and industrial facilities across Dubai.
+            </p>
+          </div>
           <div class="services-grid">
-            <article class="service-card">
-              <h3>🎨 Painting Contracting</h3>
+            <article class="service-card reveal">
+              <p class="service-num">01</p>
+              <h3>Painting Contracting</h3>
               <ul>
                 <li>Interior &amp; exterior painting</li>
                 <li>Villa, apartment &amp; office painting</li>
                 <li>Premium finishing &amp; durable materials</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🧱 Wallpaper Fixing Works</h3>
+            <article class="service-card reveal">
+              <p class="service-num">02</p>
+              <h3>Wallpaper Fixing Works</h3>
               <ul>
                 <li>Wallpaper installation &amp; removal</li>
                 <li>Residential &amp; commercial spaces</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🧩 False Ceiling &amp; Light Partitions</h3>
+            <article class="service-card reveal">
+              <p class="service-num">03</p>
+              <h3>False Ceiling &amp; Light Partitions</h3>
               <ul>
                 <li>Gypsum ceiling installation</li>
                 <li>Office &amp; shop partitions</li>
                 <li>Modern design solutions</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>❄️ Air-Conditioning, Ventilation &amp; Air Filtration</h3>
+            <article class="service-card reveal">
+              <p class="service-num">04</p>
+              <h3>AC, Ventilation &amp; Air Filtration</h3>
               <ul>
                 <li>AC installation &amp; maintenance</li>
                 <li>Ventilation systems</li>
                 <li>Air filtration solutions</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🏗 Plaster Works</h3>
+            <article class="service-card reveal">
+              <p class="service-num">05</p>
+              <h3>Plaster Works</h3>
               <ul>
                 <li>Wall plastering</li>
                 <li>Smooth &amp; decorative finishes</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🧱 Floor &amp; Wall Tiling Works</h3>
+            <article class="service-card reveal">
+              <p class="service-num">06</p>
+              <h3>Floor &amp; Wall Tiling Works</h3>
               <ul>
                 <li>Ceramic, porcelain &amp; marble tiles</li>
                 <li>Bathrooms, kitchens &amp; flooring</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>⚡ Electrical Fittings &amp; Fixtures Repairing &amp; Maintenance</h3>
+            <article class="service-card reveal">
+              <p class="service-num">07</p>
+              <h3>Electrical Fittings &amp; Fixtures</h3>
               <ul>
                 <li>Electrical wiring</li>
                 <li>Switches, lights &amp; fixtures</li>
                 <li>Repair &amp; maintenance services</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🚿 Plumbing &amp; Sanitary Installation</h3>
+            <article class="service-card reveal">
+              <p class="service-num">08</p>
+              <h3>Plumbing &amp; Sanitary Installation</h3>
               <ul>
                 <li>Water supply &amp; drainage</li>
                 <li>Bathroom &amp; kitchen plumbing</li>
                 <li>Sanitary fittings installation</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>🪚 Carpentry &amp; Wood Flooring Works</h3>
+            <article class="service-card reveal">
+              <p class="service-num">09</p>
+              <h3>Carpentry &amp; Wood Flooring Works</h3>
               <ul>
                 <li>Custom carpentry</li>
                 <li>Doors, cabinets &amp; wardrobes</li>
                 <li>Wooden &amp; laminate flooring</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <h3>⚙️ Electromechanical Equipment Installation &amp; Maintenance</h3>
+            <article class="service-card reveal">
+              <p class="service-num">10</p>
+              <h3>Electromechanical Equipment</h3>
               <ul>
                 <li>Equipment installation</li>
                 <li>Preventive &amp; corrective maintenance</li>
@@ -175,151 +246,192 @@
         </div>
       </section>
 
-       <!-- Who We Are Section -->
-       <section id="who-we-are" class="section who-we-are">
+      <!-- ═══ WHO WE ARE ═══ -->
+      <section id="who-we-are" class="section who-we-are">
         <div class="container">
-          <h2>Who We Are</h2>
-          <p class="section-intro">
-            We are a team of experienced professionals who are dedicated to providing the best possible service to our clients.
+          <p class="section-label reveal">Our Team</p>
+          <h2 class="section-title reveal">Who We <span class="accent">Are</span></h2>
+          <p class="section-sub reveal">
+            A team of experienced professionals dedicated to providing the best possible service to our clients.
           </p>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img src="./ceo.png" alt="CEO" />
-              <figcaption>Ahmed Mohamed Ahmed Mohamed Alhosani - CEO</figcaption>
+          <div class="team-grid">
+            <figure class="team-card reveal">
+              <div class="team-img-wrap">
+                <img src="./ceo.png" alt="CEO" />
+              </div>
+              <figcaption>
+                <span class="team-name">Ahmed Mohamed Ahmed Mohamed Alhosani</span>
+                <span class="team-role">CEO</span>
+              </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <img src="./manager.jpeg" alt="Manager" />
-              <figcaption>Mohammed Redwanul Huq - Manager</figcaption>
+            <figure class="team-card reveal">
+              <div class="team-img-wrap">
+                <img src="./manager.jpeg" alt="Manager" />
+              </div>
+              <figcaption>
+                <span class="team-name">Mohammed Redwanul Huq</span>
+                <span class="team-role">Manager</span>
+              </figcaption>
             </figure>
-            <figure class="gallery-item">
-              <img src="./pro.jpeg" alt="PRO" />
-              <figcaption>Sohel Emran - PRO</figcaption>
+            <figure class="team-card reveal">
+              <div class="team-img-wrap">
+                <img src="./pro.jpeg" alt="PRO" />
+              </div>
+              <figcaption>
+                <span class="team-name">Sohel Emran</span>
+                <span class="team-role">PRO</span>
+              </figcaption>
             </figure>
           </div>
         </div>
       </section>
-       
 
-      <!-- Why Choose Us Section -->
+      <!-- ═══ WHY US ═══ -->
       <section id="why-us" class="section why-us">
         <div class="container">
-          <h2>Why Choose Us</h2>
-          <p>
-            We combine technical expertise, quality materials, and professional project management to deliver safe,
-            reliable, and long-lasting solutions for every project.
-          </p>
-          <div class="why-grid">
-            <div class="why-item">✔ Licensed &amp; Approved Company</div>
-            <div class="why-item">✔ Skilled &amp; Experienced Technicians</div>
-            <div class="why-item">✔ Quality Materials &amp; Workmanship</div>
-            <div class="why-item">✔ Affordable Pricing</div>
-            <div class="why-item">✔ Customer Satisfaction Guaranteed</div>
+          <div class="why-inner">
+            <div class="why-text reveal">
+              <p class="section-label">Our Edge</p>
+              <h2 class="section-title">Why Choose <span class="accent">Us</span></h2>
+              <p class="why-body">
+                We combine technical expertise, quality materials, and professional project management
+                to deliver safe, reliable, and long-lasting solutions for every project.
+              </p>
+            </div>
+            <ul class="why-list reveal">
+              <li class="why-item">Licensed &amp; Approved Company</li>
+              <li class="why-item">Skilled &amp; Experienced Technicians</li>
+              <li class="why-item">Quality Materials &amp; Workmanship</li>
+              <li class="why-item">Affordable Pricing</li>
+              <li class="why-item">Customer Satisfaction Guaranteed</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Projects / Gallery Section -->
+      <!-- ═══ PROJECTS ═══ -->
       <section id="projects" class="section projects">
         <div class="container">
-          <h2>Our Work Portfolio</h2>
-          <p class="section-intro">
-            Below are sample categories of our completed projects. Real project photos can be added here to showcase our work.
+          <p class="section-label reveal">Portfolio</p>
+          <h2 class="section-title reveal">Our Work <span class="accent">Portfolio</span></h2>
+          <p class="section-sub reveal">
+            Sample categories of our completed projects — showcasing the quality and breadth of our work.
           </p>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img src="./painting-job.png" alt="Painting project" />
+          <div class="projects-grid">
+            <figure class="project-card reveal">
+              <div class="project-img-wrap">
+                <img src="./painting-job.png" alt="Painting project" />
+              </div>
               <figcaption>Painting Projects</figcaption>
             </figure>
-            <figure class="gallery-item">
-              <img src="./false-ceiling.png" alt="False ceiling work" />
+            <figure class="project-card reveal">
+              <div class="project-img-wrap">
+                <img src="./false-ceiling.png" alt="False ceiling work" />
+              </div>
               <figcaption>False Ceiling Works</figcaption>
             </figure>
-            <figure class="gallery-item">
-              <img src="./electric-plumber.png" alt="Electrical and plumbing works" />
+            <figure class="project-card reveal">
+              <div class="project-img-wrap">
+                <img src="./electric-plumber.png" alt="Electrical and plumbing works" />
+              </div>
               <figcaption>Electrical &amp; Plumbing Works</figcaption>
             </figure>
-            <figure class="gallery-item">
-              <img src="./renovation.png" alt="Renovation project" />
+            <figure class="project-card reveal">
+              <div class="project-img-wrap">
+                <img src="./renovation.png" alt="Renovation project" />
+              </div>
               <figcaption>Renovation Projects</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-
-      <!-- Contact Us Section -->
+      <!-- ═══ CONTACT ═══ -->
       <section id="contact" class="section contact">
-        <div class="container contact-layout">
-          <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p>
-              AL JYNOM TECHNICAL SERVICES EST.<br />
-              Building name : Al Garhoud Center, 2nd floor office(105 & 101), Airport Road, Al Garhoud, Dubai
-            </p>
-            <p>
-              <strong>Landline:</strong>
-              <a href="tel:+04 397 8082  ">+04 397 8082 </a><br />
-              <strong>Mobile:</strong>
-              <a href="tel:+971501225727">+971 50 122 5727</a><br />
-              <strong>Email:</strong>
-              <a href="mailto:aljynomtechnicalservices@gmail.com">aljynomtechnicalservices@gmail.com</a><br />
-              <strong>P.O. Box:</strong>
-              <a href="">11370</a>
-            </p>
-            <p>
-              <strong>Working Hours:</strong><br />
-              Saturday – Thursday | 8:00 AM – 7:00 PM
-            </p>
-          </div>
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-info reveal">
+              <p class="section-label">Get in Touch</p>
+              <h2 class="contact-title">Contact <span class="accent">Us</span></h2>
+              <div class="contact-details">
+                <div class="cd-row">
+                  <span class="cd-label">Address</span>
+                  <p>AL JYNOM TECHNICAL SERVICES EST.<br />
+                  Al Garhoud Center, 2nd Floor (Office 105 &amp; 101),<br />
+                  Airport Road, Al Garhoud, Dubai</p>
+                </div>
+                <div class="cd-row">
+                  <span class="cd-label">Landline</span>
+                  <a href="tel:+0439780820">+04 397 8082</a>
+                </div>
+                <div class="cd-row">
+                  <span class="cd-label">Mobile</span>
+                  <a href="tel:+971501225727">+971 50 122 5727</a>
+                </div>
+                <div class="cd-row">
+                  <span class="cd-label">Email</span>
+                  <a href="mailto:aljynomtechnicalservices@gmail.com">aljynomtechnicalservices@gmail.com</a>
+                </div>
+                <div class="cd-row">
+                  <span class="cd-label">P.O. Box</span>
+                  <p>11370</p>
+                </div>
+                <div class="cd-row">
+                  <span class="cd-label">Hours</span>
+                  <p>Saturday &ndash; Thursday | 8:00 AM &ndash; 7:00 PM</p>
+                </div>
+              </div>
+            </div>
 
-          <div class="contact-form-wrapper">
-            <h3>Request a Quote</h3>
-            <form id="quote-form" novalidate>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="service">Service Type</label>
-                <select id="service" name="service" required>
-                  <option value="">Select a service</option>
-                  <option>Painting Contracting</option>
-                  <option>Wallpaper Fixing Works</option>
-                  <option>False Ceiling &amp; Light Partitions</option>
-                  <option>AC, Ventilation &amp; Air Filtration</option>
-                  <option>Plaster Works</option>
-                  <option>Floor &amp; Wall Tiling Works</option>
-                  <option>Electrical Fittings &amp; Fixtures</option>
-                  <option>Plumbing &amp; Sanitary Installation</option>
-                  <option>Carpentry &amp; Wood Flooring Works</option>
-                  <option>Electromechanical Equipment</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="details">Project Details</label>
-                <textarea id="details" name="details" rows="4" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Request a Quote</button>
-              <p class="form-message" aria-live="polite"></p>
-            </form>
+            <div class="contact-form-wrapper reveal">
+              <h3>Request a Quote</h3>
+              <form id="quote-form" novalidate>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Type</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option>Painting Contracting</option>
+                    <option>Wallpaper Fixing Works</option>
+                    <option>False Ceiling &amp; Light Partitions</option>
+                    <option>AC, Ventilation &amp; Air Filtration</option>
+                    <option>Plaster Works</option>
+                    <option>Floor &amp; Wall Tiling Works</option>
+                    <option>Electrical Fittings &amp; Fixtures</option>
+                    <option>Plumbing &amp; Sanitary Installation</option>
+                    <option>Carpentry &amp; Wood Flooring Works</option>
+                    <option>Electromechanical Equipment</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="details">Project Details</label>
+                  <textarea id="details" name="details" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Request a Quote &rarr;</button>
+                <p class="form-message" aria-live="polite"></p>
+              </form>
+            </div>
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>
-          © 2025 AL JYNOM TECHNICAL SERVICES EST. &mdash; All Rights Reserved | Licensed by Dubai Economy &amp; Tourism
-        </p>
+      <div class="container footer-inner">
+        <p>&copy; 2025 AL JYNOM TECHNICAL SERVICES EST. &mdash; All Rights Reserved</p>
+        <p class="footer-badge">Licensed by Dubai Economy &amp; Tourism</p>
       </div>
     </footer>
 
